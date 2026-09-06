@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onClick="show()"></button> 
+   <p id="display"></p>
+</body>
+<script>
+    function show(){
+let text="";
+        for(let i=0;i<=20;i+=2){
+text=text+i+" ";
+// Use empty string ONLY when you are collecting text in parts.
+
+// (Add → Add → Add → Add)
+
+// 👉 If you know the text directly, don’t use empty string
+}
+document.getElementById("display").innerText=text;
+    }
+</script>
+</html>
