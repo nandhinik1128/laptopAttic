@@ -1,0 +1,49 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#Registration{
+    background-color: rgb(195, 236, 222);
+    padding:20px 100px;
+    text-align: center;
+    
+}
+#quiz{
+    margin-top: 30px;
+    background-color: rgb(215, 250, 249);
+     padding:20px 100px;
+    text-align: left;
+}
+#result{
+      margin-top: 30px;
+    background-color: rgb(215, 222, 250);
+     padding:20px 100px;
+    text-align: center;
+
+}
+.js{
+      margin-top: 30px;
+    text-align: left;
+    background-color: rgb(224, 215, 250);
+     padding:20px 100px;
+
+}
+#register{
+    background-color: rgb(86, 253, 198);
+     padding:20px 100px;
+     border-radius: 20px;
+     
+     
+}
+
+#submit{
+    margin-left: 100px;
+    background-color: rgb(86, 253, 198);
+     padding:20px 100px;
+     border-radius: 20px;
+}
+.ss{
+     background-color: rgb(86, 253, 198);
+     padding:20px 100px;
+     border-radius: 20px;
+     margin-left: 550px;
+}

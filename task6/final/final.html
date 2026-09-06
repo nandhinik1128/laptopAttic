@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="final.css">
+   
+</head>
+<body>
+    <div id="Registration">
+    <h1>Registration Form</h1>
+    Name:<br><input type="name" id="name" placeholder="Enter your name" required><br><br>
+    Email:<br><input type="email" id="email" placeholder="123@example.com" required><br><br>
+    Age:<br><input type="number" id="age"required><br><br>
+    <button id="register" onclick="reg()">Register</button><br><br>
+    </div>
+    <div id="quiz">
+     <h1>Quiz section</h1>
+
+    <button id="submit" onclick="submit()">Submit</button>
+    </div>
+    <div id="result">
+     <h1>Result</h1>
+    Total score:<span id="score"></span><br>
+    Percentage:<span id="percentage"></span><br>
+    Grade:<span id="grade"></span><br>
+    Timestamp:<span id="timespan"></span><br><br>
+     </div>
+   <div class="js">
+     <button class="ss" onclick="showJSON()">JSON</button>
+   <p id="json"></p></div>
+     <script  src="final.js"></script>
+</body>
+</html>

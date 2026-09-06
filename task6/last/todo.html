@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+  <div id="boxing">
+    <h1 id="h1">SIMPLE TO-DO LIST</h1>
+
+    
+    <input type="text" id="text" placeholder="What is your plan for today"><br>
+    <input type="datetime-local" id="dueTime"><br> 
+    <button onclick="add()" id="add">Add</button>
+
+    
+    <div class="btn-section">
+      <button onclick="showSection('allTasks')" class="viewBtn">All Tasks</button>
+      <button onclick="showSection('pendingTasks')" class="viewBtn">Pending Tasks</button>
+      <button onclick="showSection('completedTasks')" class="viewBtn">Completed Tasks</button>
+      <button onclick="showSection('expiredTasks')" class="viewBtn">Expired Tasks</button>
+      <button onclick="showSection('deletedTasks')" class="viewBtn">Deleted Tasks</button>
+    </div>
+
+    
+    <div id="allTasks"></div>
+    <div id="pendingTasks" class="hidden"></div>
+    <div id="completedTasks" class="hidden"></div>
+    <div id="expiredTasks" class="hidden"></div>
+    <div id="deletedTasks" class="hidden"></div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
