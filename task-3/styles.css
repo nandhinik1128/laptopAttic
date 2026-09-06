@@ -1,0 +1,72 @@
+
+body{
+    background-image:url(ng.png);
+    background-size:cover;
+    margin-top: 20px;
+    
+}
+table{
+    background-color:black;
+    width: 90px;
+    height:50px;
+    border:1px inset;
+    border-radius: 20px ;
+    margin-top: 3cm;
+    border-color:white;
+     padding:10px;
+     border-spacing:0.2cm;
+
+   }
+  button{
+   
+    width:50px;
+    height:50px;
+    border:1px inset;
+    border-color: rgb(6, 6, 6);
+    font-size:medium;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+    border-radius: 0.9cm;
+    box-shadow: none;
+  } 
+  
+  #input
+  {width:6cm;
+    height:1cm;
+font-family:'Times New Roman', Times, serif;
+   font-size:x-large;
+   text-align: right;
+   border-radius: 0.7cm;
+   border-color:white;
+   border:1px none;
+   padding: 5px;
+
+
+  }
+  .AC{
+ background-color:rgb(252, 138, 252);
+  }
+  .AC:hover{
+    background-color: rgba(254, 34, 34, 0.942);
+  }
+  .number{
+     background-color:rgb(241, 210, 255);
+  }
+  .number:hover{
+    background-color: rgb(210, 63, 247);}
+  .oper{
+     background-color:rgb(241, 210, 255);
+  }
+  .oper:hover{
+    background-color:#7c3f88;
+   } .ans{
+    background-color:rgb(252, 138, 252) ;
+
+    }
+    .ans:hover{
+      background-color:rgba(60, 230, 117, 0.896)
+    }
+  
+
+  
