@@ -1,0 +1,106 @@
+<!-- //Description:
+Create a program to calculate an employee’s total salary after applying a bonus based on their years
+of service.
+Instructions:
+1. Take inputs for salary and years of service using prompt().
+2. Convert inputs to numbers using Number().
+3. Use if-else to check:
+o If service > 5 years → bonus = 10% of salary
+o Else → no bonus
+4. Add the bonus to the original salary to get the final salary.
+5. Display bonus and total salary using alert() or console.log(). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color:rgb(236, 255, 255);
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           
+
+
+        }
+        #number{
+            width:200px;
+            height:200px;
+            color:black;
+           
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input{
+            border-style:none;
+            background-color: rgb(209, 255, 196);
+            width:100px;
+            height:30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #submit{
+background-color: rgb(153, 150, 150);
+border-radius: 5px;
+color:white;
+width:80px;
+height:40px;
+font-size: 1em;
+border-style: none;
+        }
+        #submit:hover{
+            background-color: rgb(75, 74, 74);
+        }
+        .all{
+            background-color:black;
+            width:400px;
+            height:250px;
+            text-align: center;
+            margin-left: 500px;
+            margin-top: 250px;
+            padding: 30px;
+             border-radius: 10px;
+        }
+        #result{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+     <div class="all"><label>Enter your salary</label><br><br>
+    <input type="number" id="salary"><br><br>
+    <label>Enter the years of service </label><br><br>
+    <input type="number" id="service"><br><br>
+    <button id="submit" submit>Submit</button><br>
+    <p id="result"></p></div>
+    <script>
+       submit.onclick=function(){
+       let salary= document.getElementById("salary").value
+       salary=Number(salary)
+       let service=document.getElementById("service").value
+       service=Number(service)
+       let bonus//i have not declared it in outside of the scope just now i declared outside the scope
+       let submit=document.getElementById("submit")
+       if(isNaN(salary) || isNaN(service) || service<=0 || salary<=0){
+        alert("Please enter the valid number!!")
+        return ;
+       }
+       if(service>5){
+       bonus=salary*0.10
+       }
+       else{
+         bonus=0
+       }
+       const final=bonus+salary
+document.getElementById("result").textContent=`Total salary: ${final} \n bonus: ${bonus}`}
+
+
+
+    </script>
+</body>
+</html>
+<!-- No.	Mistake	Why it’s wrong	Fix
+1	.value after prompt()	prompt() gives a string, not an element	Remove .value
+2	salry typo	Variable name mismatch	Change to salary
+3	bonus inside if-block	Not accessible outside	Declare bonus before if -->

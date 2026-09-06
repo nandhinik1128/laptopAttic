@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+</head>
+<style>
+  
+</style>
+<body>
+  <h1>Grade Calculator</h1>
+
+  <h4>Tamil</h4>
+  <input type="number" class="mark" placeholder="Subject 1">
+  <h4>English</h4>
+  <input type="number" class="mark" placeholder="Subject 2">
+  <h4>Maths</h4>
+  <input type="number" class="mark" placeholder="Subject 3">
+  <h4>Science</h4>
+  <input type="number" class="mark" placeholder="Subject 4">
+  <h4>Social</h4>
+  <input type="number" class="mark" placeholder="Subject 5">
+
+  <br><br>
+  <button id="cal">Calculate</button>
+  <div id="result"></div>
+
+  <script>
+    const button = document.getElementById("cal");
+
+    button.onclick = function() {
+      const marks = document.getElementsByClassName("mark");
+      let total = 0;
+
+      // Loop to add marks
+      for (let i = 0; i < 5; i++) {
+        let value = Number(marks[i].value);
+
+        //  Check each value for validity
+        if (value > 100 || value < 0 || isNaN(value)) {
+          alert("Enter valid marks between 0 and 100!");
+          return; // stop execution if invalid
+        }
+
+        total += value;
+      }
+
+      // Calculate average
+      let average = total / 5;
+
+      // Decide grade
+      let grade = "";
+      if (average >= 90) {
+        grade = "A";
+      } else if (average >= 75) {
+        grade = "B";
+      } else if (average >= 50) {
+        grade = "C";
+      } else {
+        grade = "Fail";
+      }
+
+      //  Display result inside the div 
+      let resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = `
+        <h3>Total Marks: ${total}</h3>
+        <h3>Average: ${average}</h3>
+        <h3>Grade: ${grade}</h3>
+      `;
+    };
+  </script>
+</body>
+</html>

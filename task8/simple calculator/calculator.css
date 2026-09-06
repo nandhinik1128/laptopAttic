@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(249, 240, 255);
+}
+.box{
+     background-color: rgb(215, 200, 248);
+    width:300px;
+    height:400px;
+    text-align: center;
+    margin-left: 550px;
+    margin-top: 200px;
+    padding:20px;
+    border-radius: 10px;
+}
+label{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+button{
+   margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(9, 10, 10);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;}
+

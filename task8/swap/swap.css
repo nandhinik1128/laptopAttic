@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+#all{
+    text-align: center;
+    border-color: black;
+    border-style: double;
+    background-color: rgb(204, 232, 223);
+    width:200px;
+    height:120px;
+    margin-left: 600px;
+    margin-top: 300px;
+    padding:50px;
+    border-radius: 20px;
+    border-style: none;
+
+}
+.word{
+    font-family: 'Times New Roman', Times, serif;
+
+   
+}
+button{
+    background-color: black;
+    border-style: none;
+width:70px;
+height:30px;
+color:aliceblue;
+}
+#word{
+    margin-top: 10px; 
+    width:200px;
+    height:30px;
+    border-style: none;
+    border-radius: 5px;
+}
+#result{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

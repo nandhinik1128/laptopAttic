@@ -1,0 +1,127 @@
+<!-- Task 2: Shopping Discount Finder
+Description:
+Build a program to calculate the final bill amount after applying a discount based on the total
+purchase.
+Instructions:
+1. Ask the user to enter the total bill amount.
+2. Convert the input to a number using Number().
+3. Apply discount rules using if-else:
+o If bill > 500 → 20% discount
+o Else → 10% discount
+4. Calculate discounted amount = bill - (bill × discount / 100).
+5. Display the original bill, discount applied, and final amount payable. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    text-align: center;
+
+}
+.all{
+    background-color: rgb(184, 245, 224);
+    width:300px;
+    text-align: center;
+    margin-left: 500px;
+    padding:20px;
+    margin-top:300px;
+    border-radius: 10px;
+
+}
+#bill{
+    margin-top: 10px;
+    border-style: none;
+    width:150px;
+    height:30px;
+    border-radius: 3px;
+    text-align: center;
+}
+#cal{
+    margin-top: 10px;
+    width:90px;
+    height:40px;
+    background-color: black;
+    border-style: none;
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    font-size: large;
+}
+#cal:hover{
+    background-color: rgb(33, 32, 32);
+}
+.label{
+    font-size: 20px;
+}
+#result{
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div class="all">
+<label class="label">Enter the total amount:</label><br>
+<input type="number" id="bill"><br>
+<button id="cal">Calculate</button><br>
+<div id="result"></div></div>
+    <script>
+
+const button=document.getElementById("cal")
+button.onclick=function(){
+    
+let bill=document.getElementById("bill").value
+bill=Number(bill)
+
+let discount
+if(bill==""||bill<=0||isNaN(bill)){
+    alert("Print the valid number!!")
+    return 
+}
+if(bill>500){
+    
+    discount=bill*0.20
+
+}
+else{
+    discount=bill*0.10
+}
+let final=bill-discount
+
+let result=document.getElementById("result").textContent=`Original bill: ${bill} \n Discount applied: ${discount}\nFinal amount payable: ${final}`
+
+}
+    </script>
+</body>
+</html>
+<!-- // 1. Button ID mistake
+<button id="cal()">Calculate</button>   // ❌ Cannot use () in id
+// Fix: <button id="cal">Calculate</button>
+
+// 2. Selecting button with wrong id
+const button = document.getElementById("cal()") // ❌ Won't find element
+// Fix: const button = document.getElementById("cal")
+
+// 3. Reassigning const
+const bill = document.getElementById("bill").value
+bill = Number(bill)   // ❌ Cannot reassign const
+// Fix: let bill = Number(document.getElementById("bill").value)
+
+// 4. discount variable scope
+if(bill>500){
+    let discount = bill*0.20   // ❌ discount only exists inside if
+} else {
+    discount = bill*0.10       // ❌ ReferenceError
+}
+// Fix: declare before if: let discount; then assign inside if-else
+
+// 5. Wrong discount calculation
+discount = bill*0.20 // ❌ already absolute, but later divided by 100
+// Fix: either use percent (20, 10) and divide by 100, OR use absolute amount directly
+
+// 6. Showing result with \n in HTML
+document.getElementById("result").textContent = final + "\n" + discount  // ❌ \n ignored in HTML
+// Fix: use innerHTML and <br> for line breaks -->
