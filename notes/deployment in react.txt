@@ -1,0 +1,15 @@
+deployment in react
+ npm install gh-pages --save-dev
+below name
+  "homepage":"https://github.com/nandhinikrishnamoorthy111/like_count.git",
+in script last two lines
+ "predeploy": "npm run build",
+ "deploy": "gh-pages -d dist"
+in terminal npm run build
+npm run deploy
+in vite.config.jsx type base:'/name of the file/'
+in terminal npm run build
+npm run deploy
+
+
+github=> refresh.... and then later settings.... pages.....visit site
